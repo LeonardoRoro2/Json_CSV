@@ -33,7 +33,7 @@ set(SOURCES
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-if(WIN32)
+if(!WIN32)
     target_link_options(${PROJECT_NAME} PRIVATE -static -static-libgcc -static-libstdc++)
 endif()
 
