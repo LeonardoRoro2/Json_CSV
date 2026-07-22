@@ -19,6 +19,14 @@ void aplanar_json(const json& j, const std::string& prefijo, std::map<std::strin
             std::string nuevo_prefijo = prefijo.empty() ? elemento.key() : prefijo + "_" + elemento.key();
             aplanar_json(elemento.value(), nuevo_prefijo, fila_datos);
         }
+    } else if (j.is_array()) { // <-- SE AGREGA ESTA CONDICIÓN PARA LOS ARREGLOS
+        int indice = 0;
+        for (auto& elemento : j) {
+            // Usamos el índice numérico para construir el nombre de la columna
+            std::string nuevo_prefijo = prefijo.empty() ? std::to_string(indice) : prefijo + "_" + std::to_string(indice);
+            aplanar_json(elemento, nuevo_prefijo, fila_datos);
+            indice++;
+        }
     } else {
         if (j.is_string()) {
             fila_datos[prefijo] = "\"" + j.get<std::string>() + "\"";
