@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 project(Json_CSV CXX)
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 20)
 
 find_package(OpenGL REQUIRED)
+find_package(Threads REQUIRED)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -33,8 +34,10 @@ set(SOURCES
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-if(!WIN32)
+target_link_libraries(${PROJECT_NAME} glfw OpenGL::GL Threads::Threads)
+
+if(WIN32)
+    target_link_options(${PROJECT_NAME} PRIVATE -static-libgcc -static-libstdc++)
+else()
     target_link_options(${PROJECT_NAME} PRIVATE -static -static-libgcc -static-libstdc++)
 endif()
-
-target_link_libraries(${PROJECT_NAME} glfw OpenGL::GL)
