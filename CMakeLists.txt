@@ -38,6 +38,6 @@ target_link_libraries(${PROJECT_NAME} glfw OpenGL::GL Threads::Threads)
 
 if(WIN32)
     target_link_options(${PROJECT_NAME} PRIVATE -static-libgcc -static-libstdc++)
-else()
-    target_link_options(${PROJECT_NAME} PRIVATE -static -static-libgcc -static-libstdc++)
+#else()
+#    target_link_options(${PROJECT_NAME} PRIVATE -static -static-libgcc -static-libstdc++)
 endif()

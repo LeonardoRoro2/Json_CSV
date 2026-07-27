@@ -206,7 +206,23 @@ void seleccionar_Archivo() {
 void acerca_De() {
 
     pfd::message ( "Acerca del Software",
-        "Desarrollado por: \n Hola",
+        "Créditos \n \n"
+        "Leonardo Antonio Romero Rodríguez\n"
+        "Project Manager \n"
+        "Software Architect \n"
+        "Co-investigador \n \n"
+        "Miguel Ángel Muñoz-López \n"
+        "Investigador principal \n"
+        "Technical Lead (Líder técnico)	Supervisa las decisiones técnicas y guía a los desarrolladores. \n"
+        "Full Stack Developer \n \n"
+        "María del Rocío Hernández-Pozo \n"
+        "Asesores científicos o académicos \n"
+        "Co-investigadora \n \n"
+        "Financiamiento \n"
+        "Esta investigación / software, fue financiada por la Secretaría de Ciencia, Humanidades, Tecnología e \n"
+        "Innovación (SECIHTI) de México, a través del proyecto PEE-2025-G-978, en el marco del programa de \n"
+        "Programas Estratégicos Nacionales de Ciencia, Tecnología y Vinculación con los Sectores Social, Público y \n"
+        "Privado.",
         pfd::choice::ok, pfd::icon::info );
 
 }
