@@ -221,8 +221,7 @@ void acerca_De() {
         "Financiamiento \n"
         "Esta investigación / software, fue financiada por la Secretaría de Ciencia, Humanidades, Tecnología e \n"
         "Innovación (SECIHTI) de México, a través del proyecto PEE-2025-G-978, en el marco del programa de \n"
-        "Programas Estratégicos Nacionales de Ciencia, Tecnología y Vinculación con los Sectores Social, Público y \n"
-        "Privado.",
+        "Programas Estratégicos Nacionales de Ciencia, Tecnología y Vinculación con los Sectores Social, Público y Privado.",
         pfd::choice::ok, pfd::icon::info );
 
 }
